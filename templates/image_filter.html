@@ -22,8 +22,7 @@ Image Filtering
                 Select your filter:
 
                 <select name="filter_type">
-                    <!-- TODO: Use a for loop to display an option element for each possible filter 
-                        type-->
+                    <!-- Iterate through the list of filter types and display them in the drop-down menu -->
                         {% for filter_type in list_of_filter_types %}
                         <option value="{{ filter_type }}">{{ filter_type }}</option>
                     {% endfor %}
@@ -40,9 +39,8 @@ Image Filtering
     <p>
         Here is your filtered image:
     </p>
-    <!-- TODO: Display the filtered image using the img tag and the URL passed in -->
+    <!-- Display the filtered image using the img tag and the URL passed in -->
     <img src="{{ image_URL }}" alt="Filtered Image" width="500" height="251">
-    <p>"{{ image_URL }}"</p>
 </section>
 {% endif %}
 
