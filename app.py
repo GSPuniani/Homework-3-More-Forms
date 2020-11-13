@@ -57,7 +57,8 @@ def compliments_results():
         'wants_compliments': request.args.get('wants_compliments'),
         'num_compliments': int(request.args.get('num_compliments'))
     }
-    # Append the dictionary with a random sample of compliments (dictionary name cannot be called before initialization)
+    # Append the dictionary with a random sample of compliments 
+    # (dictionary name in k-parameter cannot be called before initialization)
     context['random_compliments'] = random.sample(list_of_compliments, k=context['num_compliments'])
 
     return render_template('compliments_results.html', **context)

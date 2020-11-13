@@ -7,9 +7,9 @@ Compliments Results
 {% block content %}
 
 <p>Hello, {{ users_name }}!</p>
-<p>You are:</p>
 
 {% if wants_compliments == "yes" %}
+    <p>You are:</p>
     <ul>
     {% for i in range(num_compliments) %}
         <li>{{ random_compliments[i] }}</li>
