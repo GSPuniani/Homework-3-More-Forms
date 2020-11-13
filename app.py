@@ -183,16 +183,21 @@ pp = PrettyPrinter(indent=4)
 def gif_search():
     """Show a form to search for GIFs and show resulting GIFs from Tenor API."""
     if request.method == 'POST':
-        # TODO: Get the search query & number of GIFs requested by the user, store each as a 
-        # variable
+        # Save the search query from the user
+        search_query = request.form.get('search_query')
+        # Save the number of GIFs requested by the user
+        quantity = request.form.get('quantity')
 
         response = requests.get(
             TENOR_URL,
             {
-                # TODO: Add in key-value pairs for:
+                # Add in key-value pairs for:
                 # - 'q': the search query
+                'q': search_query,
                 # - 'key': the API key (defined above)
+                'key': API_KEY,
                 # - 'limit': the number of GIFs requested
+                'limit': quantity
             })
 
         gifs = json.loads(response.content).get('results')
@@ -202,7 +207,7 @@ def gif_search():
         }
 
         # Uncomment me to see the result JSON!
-        # pp.pprint(gifs)
+        pp.pprint(gifs)
 
         return render_template('gif_search.html', **context)
     else:
