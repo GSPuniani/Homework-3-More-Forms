@@ -103,9 +103,12 @@ filter_types_dict = {
     'contour': ImageFilter.CONTOUR,
     'detail': ImageFilter.DETAIL,
     'edge enhance': ImageFilter.EDGE_ENHANCE,
+    'edge enhance more': ImageFilter.EDGE_ENHANCE_MORE,
     'emboss': ImageFilter.EMBOSS,
+    'find edges': ImageFilter.FIND_EDGES,
     'sharpen': ImageFilter.SHARPEN,
-    'smooth': ImageFilter.SMOOTH
+    'smooth': ImageFilter.SMOOTH,
+    'smooth more': ImageFilter.SMOOTH_MORE
 }
 
 def save_image(image, filter_type):
