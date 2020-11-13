@@ -24,7 +24,9 @@ Image Filtering
                 <select name="filter_type">
                     <!-- TODO: Use a for loop to display an option element for each possible filter 
                         type-->
-                    <option value="blur">blur</option>
+                        {% for filter_type in list_of_filter_types %}
+                        <option value="{{ filter_type }}">{{ filter_type }}</option>
+                    {% endfor %}
                 </select>
             </label>
         </p>
@@ -33,14 +35,14 @@ Image Filtering
     </fieldset>
 </form>
 
-{% if image_url %}
+{% if image_URL %}
 <section id="form_results">
     <p>
         Here is your filtered image:
     </p>
-    <p>
-        <!-- TODO: Display the filtered image using the img tag and the URL passed in -->
-    </p>
+    <!-- TODO: Display the filtered image using the img tag and the URL passed in -->
+    <img src="{{ image_URL }}" alt="Filtered Image" width="500" height="251">
+    <p>"{{ image_URL }}"</p>
 </section>
 {% endif %}
 
