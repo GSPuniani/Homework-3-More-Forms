@@ -74,7 +74,13 @@ animal_to_fact = {
     'parrot': 'Parrots will selflessly help each other out.',
     'mantis shrimp': 'The mantis shrimp has the world\'s fastest punch.',
     'lion': 'Female lions do 90 percent of the hunting.',
-    'narwhal': 'Narwhal tusks are really an "inside out" tooth.'
+    'narwhal': 'Narwhal tusks are really an "inside out" tooth.',
+    'puffin': 'Puffins use twigs to scratch their bodies.',
+    'shark': 'Some sharks glow in the dark.',
+    'grizzly bear': "A grizzly bear's bite is strong enough to crush a bowling ball.",
+    'zebra': 'Zebra stripes act as a natural bug repellant.',
+    'octopus': 'Octopuses can taste with their arms.',
+    'reindeer': 'Reindeer eyes turn blue in the winter.'
 }
 
 @app.route('/animal_facts')
