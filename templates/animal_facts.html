@@ -13,8 +13,7 @@ Animal Facts
         <label>
             Which animal do you want facts on?
 
-            <!-- TODO: Use a for loop to show one option element for each 
-                animal. -->
+            <!-- Iterate through list of animals to display them in a drop-down menu -->
             <select name="animal">
                 {% for item in animals %}
                     <option value="{{ item }}">{{ item }}</option>
@@ -26,9 +25,7 @@ Animal Facts
     </fieldset>
 </form>
 
-<!-- TODO: If an animal was chosen, show the section below with the appropriate 
-    animal fact. -->
-
+<!-- Display the interesting fact for the selected animal choice -->
 <section id="form_results">
     {% if animal_fact != None %}
         <p>
